@@ -7,6 +7,9 @@
     "test": "mocha",
     "build": "echo 'No build step needed'"
   },
+  "routes": [
+    { "src": "/(.*)", "dest": "src/app.mjs" }
+  ],
   "author": "",
   "license": "ISC",
   "type": "module",

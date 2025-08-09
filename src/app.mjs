@@ -40,7 +40,7 @@ const Song = mongoose.model('Song');
 const Game = mongoose.model('Game');
 const User = mongoose.model('User');
 
-app.listen(process.env.PORT || 3000);
+// app.listen(process.env.PORT || 3000);
 
 function hasPageAccess() {
 
