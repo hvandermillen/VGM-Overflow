@@ -1,0 +1,46 @@
+
+<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="/output.css">
+        {{!-- <script src="https://cdn.tailwindcss.com"></script> --}}
+</head>
+{{#if message}}
+<div class="error">{{ message }}</div>
+{{/if}}
+<div class="h-[calc(100vh-70px)] bg-[url('/images/concert_pic_AIT.jpg')] bg-[length:2016px_1512px]  bg-center">
+<div class="h-[calc(100vh-70px)] backdrop-blur-lg">
+<div class="px-6 py-24 sm:py-32 lg:px-8 ">
+    <div class="mx-auto max-w-2xl text-center">
+        <h2 class="text-balance text-4xl font-semibold tracking-tight text-white sm:text-4xl">Welcome to VGM Overflow!</h2>
+    </div>
+    <form action="#" method="POST" action = "register" class="mx-auto mt-16 max-w-xl sm:mt-20">
+        <div class="grid grid-cols-1 gap-x-8 gap-y-2 sm:grid-cols-1">
+        <div>
+            <label for="username" class="block text-sm/6 font-semibold text-white">Username:</label>
+            <div class="mt-2.5">
+                <input type="text" name="username" id="username" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6">
+            </div>
+        </div>
+        <br>
+        <div>
+            <label for="email" class="block text-sm/6 font-semibold text-white">Email: </label>
+            <div class="mt-2.5">
+                <input type="email" name="email" id="email" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6">
+            </div>
+        </div>
+        <br>
+        <div>
+            <label for="password" class="block text-sm/6 font-semibold text-white">Password: </label>
+            <div class="mt-2.5">
+                <input type="password" name="password" id="password" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6">
+            </div>
+        </div>
+        </div>
+        <div class="mt-10">
+        <button type="submit" value = "Register" class="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Submit</button>
+        </div>
+    </form>
+</div>
+</div>
+</div>

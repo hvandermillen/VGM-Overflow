@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" href="/output.css">
+        {{!-- <script src="https://cdn.tailwindcss.com"></script> --}}
+
+    </head>
+    <body>
+        <div class="bg-zinc-50 px-6 py-20 text-center text-surface dark:bg-neutral-700 dark:text-white">
+            <h1 class="mb-6 text-5xl font-bold">{{song.title}}</h1>
+        </div>
+        <div class="flex flex-col items-center justify-center">
+            <form class="items-center w-1/3" METHOD="post" action="/song/{{song.title}}/edit">
+                <label for="title" class="w-1/3">Title: </label>
+                <input type="text" id="title" name="title" value="{{song.title}}" class="w-2/3"><br>
+                <label for="url">URL: </label>
+                <input type="text" id="url" name="url" value={{song.url}} class="w-2/3">
+                <br>
+                <br>
+                <button type="submit" class="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Update</button>
+            </form>
+            <br>
+            <form class="items-center w-1/3" METHOD="post" action="/song/delete/{{song.title}}">
+                <button type="delete" class="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Delete</button>
+            </form>
+        </div>
+    </body>

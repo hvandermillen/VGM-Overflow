@@ -1,0 +1,18 @@
+ <head>
+        <meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" href="/output.css">
+        {{!-- <script src="https://cdn.tailwindcss.com"></script> --}}
+    </head>
+    <body>
+        <div class="bg-zinc-50 px-6 py-20 text-center text-surface dark:bg-neutral-700 dark:text-white">
+            <h1 class="mb-6 text-5xl font-bold">{{song.title}}</h1>
+        </div>
+        <br>
+        <iframe width="420" height="315" src={{url}} class="mx-auto">
+        </iframe>
+        <br>
+        <a href="/song/{{song.title}}/edit">
+            <button href="/song/{{song.title}}/edit" value="Edit" id="edit" class="block w-48 mx-auto rounded-md bg-orange-600 px-3.5 py-2.5 text-center text-lg font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600">Edit</button>
+        </a>
+    </body>

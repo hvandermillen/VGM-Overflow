@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" href="/output.css">
+        {{!-- <script src="https://cdn.tailwindcss.com"></script> --}}
+
+    </head>
+    <body>
+        <div class="grid grid-cols-2 gap-4 h-[92vh]">
+            <div id="info-bar" class="container sm">
+                <br>
+                <h1 class="mb-6 text-5xl font-bold text-center">{{game.title}}</h1>
+                <br>
+                <img src={{game.imageLink}} class="object-contain size-500 rounded-lg mx-auto"> 
+                <br>
+                <h2 class="text-lg text-center text-surface dark:bg-neutral-700 dark:text-white">Added by {{addedBy}}</h2>
+                <br>
+                <form action="/game/{{game.title}}" method="POST">
+                    <label for="playlist_url" class="block text-center text-sm/6 font-semibold text-black">Add Multiple Songs via Youtube Playlist Link:</label>
+                    <div class="mt-2.5">
+                        <input type="text" name="playlist_url" id="playlist_url" class="block mx-auto w-1/2 rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6">
+                    </div>
+                    <br>
+                    <button value="addPlaylist" id="add-playlist" class="block w-48 mx-auto rounded-md bg-sky-600 px-3.5 py-2.5 text-center text-lg font-semibold text-white shadow-sm hover:bg-sky-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600">Add Songs</button>
+                </form>
+                <br>
+                <div class="'p-4 mb-4 text-lg rounded-lg text-red-800 bg-red-50 text-center" role="alert">
+                {{message}}
+                </div>
+                <a href="/game/{{game.title}}/edit">
+                    <button value="Edit" id="edit" class="block w-48 mx-auto rounded-md bg-orange-600 px-3.5 py-2.5 text-center text-lg font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600">Edit</button>
+                </a>
+            </div>
+            <div class="overflow-y-auto">
+                {{#each songs}}
+                    <li><a href = '/song/{{title}}'>{{title}}</a></li>
+                {{/each}}
+            </div>
+            <br>
+            
+        </div>
+    </body>
