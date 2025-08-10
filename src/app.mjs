@@ -327,7 +327,7 @@ app.post('/addSong', async (req, res) => {
     } else {
       //user is not logged in
       const games = await Game.find({}).exec();
-      res.render('addGame', {message: "You must login before adding a game!", games: games, user: req.session.user});
+      res.render('addSong', {message: "You must login before adding a song!", games: games, user: req.session.user});
     }
   });
 
